@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>UneCraft | Key Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <script src="../../js/javascript_1.js"></script> <!-- Подключение внешнего JS файла -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="bt_download">
+            <button id="downloadBtn">Download server.jar</button>
+            <script>
+                document.getElementById('downloadBtn').addEventListener('click', function () {
+                    const url = 'files/server.jar';
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = url.split('/').pop();
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                });
+            </script>
+        </div>
+        <button onclick="location.href='../../UneCraft.html'" id="btnhome">Главная</button>
+        <form action="javascript:void(0);">
+            <div class="input-field no_copy">
+                <input id="a" required="">
+                <label>SID</label>
+            </div>
+            <div class="input-field no_copy">
+                <input id="b" required="">
+                <label>PID</label>
+            </div>
+            <div class="input-field no_copy">
+                <input id="c" required="">
+                <label>VERS</label>
+            </div>
+            <div class="button no_copy">
+                <div class="inner"></div>
+                <button onclick="O()">Get KEY</button>
+            </div>
+        </form>
+        <div class="input-field">
+            <input class="d" id="d" type="d" required="">
+            <label class="no_copy">OUTPUT</label>
+            <footer>
+                <p class="ooo_unecraft no_copy">© ООО «UneCraft». 2024 г. Все права защищены.</p>
+            </footer>
+        </div>
+    </div>
+    <script>
+        function O() {
+            var a_value = document.getElementById('a').value;
+            var b_value = document.getElementById('b').value;
+            var c_value = document.getElementById('c').value;
+
+            var combined_string = c_value + a_value + b_value + c_value + a_value + b_value + b_value + a_value + c_value;
+            var digits_only = combined_string.replace(/[^0-9]/g, '');
+
+            document.getElementById('d').value = digits_only;
+        }
+    </script>
+</body>
+
+</html>

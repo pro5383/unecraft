@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'Minecraft_1';
+    src: url('fonts/Minecraft_1.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Molot_1';
+    src: url('fonts/Molot_1.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Pusab_1';
+    src: url('fonts/Pusab_1.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    font-family: 'Minecraft', sans-serif;
+    background: url('images/background_1.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    /* Полупрозрачная верхняя панель */
+}
+
+.logo {
+    cursor: pointer;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(90deg, rgb(255, 0, 0) 35%, rgba(255, 196, 0, 0.938) 100%);
+    font-family: 'Molot_1';
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+nav a.get-started {
+    font-family: 'Molot_1';
+    background: #ff0000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+nav a.get-started:hover {
+    transform: scale(1.2);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+    /* Высота окна браузера минус высота верхней панели */
+    text-align: center;
+    color: white;
+}
+
+.intro h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.intro .btn {
+    cursor: pointer;
+    font-family: 'Minecraft_1';
+    background: #ff0000;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 24px;
+    border-radius: 5px;
+    border: 3px solid #8b0000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    /* Плавный переход для всех свойств */
+}
+
+.intro .btn:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.panel_up {
+    font-family: 'Molot_1';
+}
+
+.center_logo {
+    cursor: default;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(90deg, rgb(255, 0, 0) 35%, rgba(255, 196, 0, 0.938) 100%);
+    font-family: 'Pusab_1';
+}
+
+.ooo_unecraft {
+    cursor: pointer;
+    color: white;
+    font-family: 'Molot_1';
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.no_copy {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+/* Media Queries for Mobile Optimization */
+@media (max-width: 768px) {
+    body {
+        background-size: cover;
+        font-size: 1em;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .panel_up {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .panel_up a {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .get-started {
+        margin-top: 10px;
+    }
+}
+
+/* Smaller devices */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2em;
+    }
+
+    .panel_up a {
+        font-size: 1em;
+        padding: 8px;
+    }
+
+    .intro h1 {
+        font-size: 2em;
+    }
+
+    .intro .btn {
+        font-size: 1.2em;
+        padding: 10px 20px;
+    }
+
+    .ooo_unecraft {
+        font-size: 0.8em;
+        padding: 5px 10px;
+    }
+}
